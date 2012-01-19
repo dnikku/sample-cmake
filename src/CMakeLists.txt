@@ -33,7 +33,7 @@ if (USE_MYMATH)
 endif (USE_MYMATH)
 
 # add the executable
-add_executable (Tutorial tutorial.cxx)
+add_executable (Tutorial tutorial.cpp)
 target_link_libraries (Tutorial  ${EXTRA_LIBS})
 
 # add the install targets

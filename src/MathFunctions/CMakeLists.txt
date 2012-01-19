@@ -1,5 +1,5 @@
 # first we add the executable that generates the table
-add_executable(MakeTable MakeTable.cxx)
+add_executable(MakeTable MakeTable.cpp)
 
 get_target_property(MakeTableLocation MakeTable LOCATION)
 
@@ -12,7 +12,7 @@ add_custom_command (
   )
 
 set_source_files_properties (
-  mysqrt.cxx PROPERTIES
+  mysqrt.cpp PROPERTIES
   OBJECT_DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/Table.h
   )
 
@@ -20,7 +20,7 @@ set_source_files_properties (
 include_directories( ${CMAKE_CURRENT_BINARY_DIR} )
 
 # add the main library
-add_library(MathFunctions mysqrt.cxx)
+add_library(MathFunctions mysqrt.cpp)
 
 install (TARGETS MathFunctions DESTINATION bin)
 install (FILES MathFunctions.h DESTINATION include)
